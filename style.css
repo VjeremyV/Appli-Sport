@@ -14,6 +14,7 @@ body {
   border-radius: 10px;
   border: 1px black solid;
   margin: 10px 20px 10px;
+  box-shadow: 3px 3px 13px 1px black;
 }
 
 .app {
@@ -24,6 +25,7 @@ body {
   padding: 10px;
   width: auto;
   border: 1px black solid;
+  box-shadow: 3px 3px 13px 1px black;
 }
 
 h1,
@@ -43,18 +45,23 @@ main {
   letter-spacing: 0.1rem;
   line-height: 3rem;
 }
+
+main img{
+  height: 300px;
+}
 .btn-container{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 input, button {
+  padding: 10px;
   margin: 10px;
-  border-radius: 10px;
+  border-radius: 20px;
   border: 1px solid black;
+  box-shadow: 3px 4px 6px black;
   outline: none;
   width: 20%;
-  height: 30px;
   font-size: 1.5rem;
   background: rgba(255, 74, 74, 0.555);
   text-align: center;
@@ -77,18 +84,21 @@ input:focus{
 ul{
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .carte-routine{
-  background: rgb(255, 250, 230);
+  background: rgba(143, 143, 255, 0.582);
   min-height: 175px;
   padding: 10px;
   margin: 20px;
   border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: 3px 3px 13px 1px black;
 }
 .card{
     border: 1px solid black;
-    background: rgba(143, 143, 255, 0.582);
+    background: rgba(255, 74, 74, 0.555);
     border-radius: 10px;
     padding: 15px;
     margin: 15px;

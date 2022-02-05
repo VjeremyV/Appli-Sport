@@ -93,8 +93,10 @@ const exercises = {
   y: { letter: "y", name: "planche", repetition: 0, time: 2, pic: "planche" },
   z: { letter: "z", name: "pompes", repetition: 30, time: 0, pic: "pompes" },
 };
-const liste = [];
+let liste = [];
 let wordLenght = 0;
+let mapArray;
+
 ////////////////////////////////////////////fonctions utiles/////////////////////////////////////////////////////
 class Exercice {
   constructor() {
@@ -204,13 +206,21 @@ const utils = {
       return o.selectionStart;
     }
   },
+  reboot: function () {
+    page.lobby();
+    mapArray="";
+    liste = [];
+    wordLenght = 0;
+    this.generateCards("")
+  },
+
 };
 /////////////////////////////////////////////////génération de PAGE////////////////////////////////////////////////////////
 const page = {
   lobby: function () {
     utils.pageContent(
-      "Comment ça marche ?",
-      "Chaque lettre de l'alphabet correspond à un exercice différent.<br> Ecris quelque chose dans l'encart ci-dessous,<br> et laisse l'application de générer ta séance !<br> Tu peux par exemple écrire ton nom ou Prenom,<br> ou encore chaque jour de la semaine.<br> A toi de voir et d'avoir de l'imagination et réalises ta propre routine ! ",
+      "Créer ta propre séance !",
+      "Chaque lettre de l'alphabet correspond à un exercice différent.<br> Tu écris quelque chose dans l'encart ci-dessous,<br> et l'application génère ta séance !<br> Utilise ton nom, ton prénom ou même les jours de la semaine<br> pour personnaliser une routine.<br> Essaye ! ",
       ` <input type="text" placeholder='écrire ici'> <span class="checker"></span><button id="start">C'est parti!</button>`
     );
     const input = document.querySelector("input");
@@ -232,7 +242,7 @@ const page = {
           exercises[chars[utils.getSelectionStart(input) - 1]]
         );
         // liste.push(exercises[e.target.value.slice(e.target.value.length - 1)]);
-        console.log(liste);
+        // console.log(liste);
         let mapArray = liste
           .map(
             (exo) =>
@@ -269,18 +279,30 @@ const page = {
           )
           .join("");
         utils.generateCards(`<ul>${mapArray}</ul>`);
+        
       }
+    });
+    start.addEventListener("click", () => {
+      page.routine();
     });
   },
   routine: function () {
     const exercice = new Exercice();
     utils.pageContent("Routine", exercice.updateCountdow(), null);
   },
-  end: function () {},
+  end: function () {
+    utils.pageContent("Bravo ! Vos êtes allé au bout de votre séance !", "<button id='restart'>Recommencer</button>",
+    "<button id='reboot' class='btn-reboot'>Réinitialiser <i class='fas fa-times-circle'></i></button>")
+    restart.addEventListener("click", () => {
+      this.routine();
+    });
+    reboot.addEventListener("click", () => {
+      utils.reboot();
+    });
+  },
+  
 };
 
 page.lobby();
-start.addEventListener("click", () => {
-  page.routine();
-});
+
 ///////////////////////////////////////////////////////checker////////////////////////
