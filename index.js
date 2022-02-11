@@ -152,7 +152,7 @@ class Exercice {
           this.repetitions++;
           this.updateCountdow();
         }
-      }, 100);
+      }, 1000);
 
       return (main.innerHTML = `
         <div>
