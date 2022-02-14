@@ -84,7 +84,7 @@ input:focus{
 ul{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .carte-routine{
@@ -101,7 +101,7 @@ ul{
     background: rgba(255, 74, 74, 0.555);
     border-radius: 10px;
     padding: 15px;
-    margin: 15px;
+    margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
