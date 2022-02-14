@@ -127,7 +127,7 @@ class Exercice {
           this.seconde--;
           this.updateCountdow();
         }
-      }, 10);
+      }, 1000);
 
       return (main.innerHTML = `
         <div>
