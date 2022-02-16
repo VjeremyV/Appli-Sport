@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Parralax</title>
+  </head>
+  <body>
+    <section class="banner">
+      <div class="container">
+        <div id="scene">
+          <div class="layer" data-depth-x="0.1">
+            <img src="./assets/moon.png" alt="moon" />
+          </div>
+          <div class="layer" data-depth-x="0.2">
+            <img src="./assets/moutains.png" alt="montains" />
+          </div>
+          <div class="layer" data-depth="0.4">
+            <img src="./assets/birds.png" alt="bird" />
+          </div>
+          <div class="layer" data-depth-x="0.28">
+            <img src="./assets/trees.png" alt="trees" />
+          </div>
+          <div class="layer" data-depth-x="0.35">
+            <img src="./assets/trees2.png" alt="trees" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

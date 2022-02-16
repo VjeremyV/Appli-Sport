@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App Meteo</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="overlay-icon-loading">
+        <img src="./ressources/chargement/circles.svg" alt="logo chargement">
+      </div>
+      <h1>Météo</h1>
+      <div class="bloc-logo-info">
+        <div class="bloc-logo">
+          <img src="./ressources/jour/03d.svg" alt="logo du temps" class="logo-weather"/>
+        </div>
+        <div class="bloc-info">
+          <p class="weather"></p>
+          <p class="temperature"></p>
+          <p class="localisation"></p>
+        </div>
+      </div>
+
+      <div class="hour-bloc-forecast">
+        <div class="bloc-h">
+          <p class="hour-name-forecast"></p>
+          <p class="hour-forecast-value"></p>
+        </div>
+        <div class="bloc-h">
+          <p class="hour-name-forecast"></p>
+          <p class="hour-forecast-value"></p>
+        </div>
+        <div class="bloc-h">
+          <p class="hour-name-forecast"></p>
+          <p class="hour-forecast-value"></p>
+        </div>
+        <div class="bloc-h">
+          <p class="hour-name-forecast"></p>
+          <p class="hour-forecast-value"></p>
+        </div>
+        <div class="bloc-h">
+          <p class="hour-name-forecast"></p>
+          <p class="hour-forecast-value"></p>
+        </div>
+        <div class="bloc-h">
+          <p class="hour-name-forecast"></p>
+          <p class="hour-forecast-value"></p>
+        </div>
+        <div class="bloc-h">
+          <p class="hour-name-forecast"></p>
+          <p class="hour-forecast-value"></p>
+        </div>
+      </div>
+      <div class="day-bloc-forecast">
+          <div class="bloc-d">
+              <p class="day-forecast-name"></p>
+              <p class="day-forecast-weather"></p>
+          </div>
+          <div class="bloc-d">
+              <p class="day-forecast-name"></p>
+              <p class="day-forecast-weather"></p>
+          </div>
+          <div class="bloc-d">
+              <p class="day-forecast-name"></p>
+              <p class="day-forecast-weather"></p>
+          </div>
+          <div class="bloc-d">
+              <p class="day-forecast-name"></p>
+              <p class="day-forecast-weather"></p>
+          </div>
+          <div class="bloc-d">
+              <p class="day-forecast-name"></p>
+              <p class="day-forecast-weather"></p>
+          </div>
+          <div class="bloc-d">
+              <p class="day-forecast-name"></p>
+              <p class="day-forecast-weather"></p>
+          </div>
+          <div class="bloc-d">
+              <p class="day-forecast-name"></p>
+              <p class="day-forecast-weather"></p>
+          </div>
+      </div>
+      <div class="quotation-container">
+        <h2>Citation du jour</h2>
+        <p class="quotation"></p>
+        <p class="author"></p>
+      </div>
+    </div>
+
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>
