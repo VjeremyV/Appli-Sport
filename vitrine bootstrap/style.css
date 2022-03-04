@@ -1,0 +1,18 @@
+h1::after{
+    content: " "attr(data-greeting);
+}
+
+main{
+    margin-left: 0 !important ;
+    margin-right: 0 !important;
+}
+/* img{
+    width: 100vh;
+    height: 300px;
+} */
+
+@media screen and (max-width:1400px){
+    .section2 img{
+        width: 100% !important;
+    }
+}
