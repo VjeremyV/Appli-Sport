@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <button data-toggle='modal' data-target='#modal-1'>click modal</button>
+<!-- 
+        - le data-toggle correspond au flag qui permet de rendre l'affichage de la modale
+        - le data-target correspond à l'id de notre modal, c'est ce qui la rend unique   
+-->
+
+     <div class="modal" id="modal-1">
+        <div class="modal-content">
+            <div>
+                <label for="copyText">Ecris du texte</label>
+                <input type="text" name="copyText" id="copyText" placeholder="copie">
+                <button id="copyButton">Copie!</button>
+            </div>
+        </div>
+    </div>
+
+    <script src='./assets/js/modal.js'></script>
+    <script src='./assets/js/copy.js'></script>
+</body>
+</html>
