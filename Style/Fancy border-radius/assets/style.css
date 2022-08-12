@@ -1,0 +1,95 @@
+body {
+    color:white;
+    text-align:center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #222;
+    min-height: 100vh;
+    --size: 18;
+    --w: calc(var(--size) * 1px); /*petite witdh*/
+    --r: calc((var(--size) / 2) * 1px);
+    --_r: calc(-1 * (var(--size) / 2) * 1px);
+    --W :300px; /*grande witdh*/
+  }
+
+  #container {
+    width: var(--W);
+    height: var(--W);
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border:1px dashed #aa7700;
+  }
+
+  #shape{
+    background: orange;
+  /*background: linear-gradient(195deg, #db871a, #b93c85);*/
+  width: var(--W);
+  height: var(--W);
+  /*outline: 1px dashed #aa7700;bug in Firefox. Had to move it on the parent*/
+  position: relative;
+  border-radius:77% 23% 50% 50% / 70% 67% 33% 30%;
+  }
+
+#shape span{
+    box-sizing: border-box;
+    display: block;
+    background-color: red;
+    width: var(--w);
+    height: var(--w);
+    position: absolute;
+    border: 4px solid transparent;
+    background-clip: padding-box;
+}
+
+#shape span:hover{
+    cursor:pointer;
+    background:hsl(200,100%,50%);
+    border: 4px solid transparent;
+    background-clip: padding-box;
+  }
+
+  
+#shape #span1 {
+    top: 0px;
+    transform: translate(var(--_r), var(--_r));
+  }
+  #shape #span2 {
+    right: 0px;
+    transform: translate(var(--r), var(--_r));
+    /*background-color: green;*/
+  }
+  #shape #span3 {
+    bottom: 0px;
+    transform: translate(var(--w), var(--r));
+    /*background-color: blue;*/
+  }
+  #shape #span4 {
+    left: 0px;
+    transform: translate(var(--_r), var(--r));
+    /*background-color: purple;*/
+  }
+  
+  #shape span.active {
+    border: 4px solid white;
+    background:hsl(200,100%,50%);
+  }
+  
+  #controls {
+    display: none;
+  }
+  
+  #output{padding:.25em;width:300px; margin:.5em auto;}
+  p span{
+    font-family:serif; font-style: italic; color:#aaa;
+  }
+  
+  
+  
+  @media only screen and (max-height: 600px) {
+    #container{bottom:20px;top:auto;}
+    p span,p br{display:none;}
+  }
+  

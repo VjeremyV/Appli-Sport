@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #6990f2;
+}
+
+.wrapper{
+    width: 430px;
+    padding: 30px;
+    background: #ffff;
+    border-radius: 5px;
+}
+
+.wrapper header{
+    color: #6990f2;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.wrapper form{
+    border: 2px dashed #6990f2;
+    height: 167px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 167px;
+    margin: 15px;
+}
+
+form :where(i, p){
+    color: #6990f2;
+}
+
+form i {
+    font-size: 2.4rem;
+}
+form p {
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+section .row{
+    background: #e9f0ff;
+    margin-bottom: 10px;
+    list-style: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .row i {
+    font-style: 30px;
+    color: #6990f2;
+}
+
+section .details span{
+    font-size: 1rem;
+}
+
+section .row .content{
+    width: 100%;
+    margin-left: 15px;
+}
+
+.progress-area .row .content{
+    width: 100%;
+    margin-left: 15px; 
+}
+section .details, .progress-area .details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.uploaded-area .row .content{
+display: flex;
+align-items: center;
+}
+
+
+.uploaded-area .row .details{
+display: flex;
+margin-left: 15px;
+flex-direction: column;
+}
+
+.uploaded-area .fa-check{
+    font-size: 1.5rem;
+}
